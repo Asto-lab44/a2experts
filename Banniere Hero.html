@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1440" />
+<title>A2EXPERTS — Bannière dépannage informatique Nantes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0B1B2B;
+    --ink-2:#13314F;
+    --paper:#F6F8FB;
+    --line:#E3E8EF;
+    --muted:#5C6B7A;
+    --accent:#1E6BFF;       /* primary action */
+    --accent-2:#00C2A8;     /* secondary accent */
+    --warning:#FF7A1A;      /* dépannage urgency */
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:1440px;margin:0 auto;background:#fff}
+
+  /* ---------- TOP BAR ---------- */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 56px;border-bottom:1px solid var(--line);
+    font-size:13px;color:var(--muted);
+  }
+  .topbar .left{display:flex;align-items:center;gap:20px}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#EEF6FF;color:var(--ink-2);
+    padding:5px 11px;border-radius:999px;font-weight:600;font-size:12px;
+  }
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:#2ED673;box-shadow:0 0 0 3px rgba(46,214,115,.18)}
+  .topbar .right{display:flex;align-items:center;gap:22px}
+  .topbar a{color:inherit;text-decoration:none}
+  .topbar .phone{color:var(--ink);font-weight:700}
+
+  /* ---------- NAV ---------- */
+  nav.main{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 56px;border-bottom:1px solid var(--line);
+  }
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+  .logo-mark{
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(135deg,var(--ink) 0%,var(--ink-2) 100%);
+    display:grid;place-items:center;color:#fff;font-weight:800;
+    letter-spacing:.5px;font-size:18px;
+  }
+  .logo-mark::after{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--accent-2);position:absolute;transform:translate(11px,11px);
+    box-shadow:0 0 0 3px rgba(0,194,168,.18);
+  }
+  .logo-mark{position:relative}
+  .logo-name{font-weight:800;font-size:22px;letter-spacing:-.01em}
+  .logo-name span{color:var(--accent-2)}
+  .nav-links{display:flex;align-items:center;gap:30px;font-size:14.5px;font-weight:600;color:var(--ink)}
+  .nav-links a{text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:6px}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-links .chev{opacity:.5;font-size:10px;transform:translateY(1px)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    border-radius:10px;padding:10px 16px;font-weight:700;font-size:14px;
+    text-decoration:none;cursor:pointer;border:1px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{background:var(--paper)}
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px -10px rgba(11,27,43,.45)}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    display:grid;grid-template-columns: 1.05fr .95fr;
+    gap:48px;padding:64px 56px 72px;align-items:center;position:relative;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(30,107,255,.06), transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(0,194,168,.06), transparent 40%);
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    color:var(--ink-2);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+    padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--warning);box-shadow:0 0 0 3px rgba(255,122,26,.18)}
+  h1.hero-title{
+    font-size:64px;line-height:1.02;letter-spacing:-.025em;
+    margin:22px 0 18px;font-weight:800;color:var(--ink);
+    text-wrap:balance;
+  }
+  h1.hero-title em{font-style:normal;color:var(--accent);position:relative;white-space:nowrap}
+  h1.hero-title em::after{
+    content:"";position:absolute;left:0;right:0;bottom:4px;height:10px;
+    background:linear-gradient(90deg, rgba(30,107,255,.18), rgba(0,194,168,.18));
+    z-index:-1;border-radius:4px;
+  }
+  .hero-sub{
+    font-size:18px;line-height:1.55;color:var(--muted);max-width:520px;
+    margin:0 0 28px;
+  }
+  .hero-ctas{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .btn-lg{padding:14px 22px;font-size:15px;border-radius:12px}
+  .btn-accent{background:var(--accent);color:#fff}
+  .btn-accent:hover{transform:translateY(-1px);box-shadow:0 14px 28px -10px rgba(30,107,255,.5)}
+  .btn-outline{background:#fff;border-color:var(--line);color:var(--ink)}
+  .btn-outline:hover{border-color:var(--ink)}
+  .btn-outline .ico{width:18px;height:18px;color:var(--accent)}
+
+  .kpis{
+    display:flex;gap:36px;margin-top:36px;padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .kpi .v{font-size:28px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+  .kpi .v span{color:var(--accent-2)}
+  .kpi .l{font-size:13px;color:var(--muted);font-weight:500;margin-top:2px}
+
+  /* ---------- IMAGE STAGE ---------- */
+  .stage{
+    position:relative;aspect-ratio: 5/6;border-radius:24px;overflow:hidden;
+    background:
+      linear-gradient(180deg, rgba(11,27,43,.0) 0%, rgba(11,27,43,.55) 100%),
+      repeating-linear-gradient(135deg, #E9EEF5 0 12px, #DDE5EE 12px 24px);
+    box-shadow:0 30px 60px -28px rgba(11,27,43,.35), 0 2px 0 rgba(255,255,255,.6) inset;
+  }
+  .stage .placeholder-meta{
+    position:absolute;inset:auto 0 0 0;padding:18px 22px;
+    color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.02em;
+    display:flex;justify-content:space-between;align-items:end;gap:12px;
+    text-shadow:0 1px 0 rgba(0,0,0,.2);
+  }
+  .placeholder-meta .lbl{opacity:.85}
+  .placeholder-meta .dims{opacity:.7}
+  .stage .drop-hint{
+    position:absolute;top:18px;left:18px;right:18px;
+    border:1.5px dashed rgba(11,27,43,.35);border-radius:14px;
+    padding:18px 18px;color:var(--ink);
+    background:rgba(255,255,255,.78);backdrop-filter:blur(4px);
+    font-size:13px;line-height:1.5;
+  }
+  .drop-hint b{display:block;font-size:14px;margin-bottom:4px;color:var(--ink)}
+  .drop-hint .mono{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink-2)}
+
+  /* Floating cards on the stage */
+  .float-card{
+    position:absolute;background:#fff;border-radius:14px;
+    box-shadow:0 18px 40px -18px rgba(11,27,43,.35), 0 0 0 1px var(--line);
+    padding:12px 14px;display:flex;align-items:center;gap:10px;font-size:13px;
+  }
+  .float-card .ico{
+    width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:#EAF2FF;color:var(--accent);flex-shrink:0;
+  }
+  .float-card.green .ico{background:#E6FAF6;color:var(--accent-2)}
+  .float-card.orange .ico{background:#FFF1E6;color:var(--warning)}
+  .float-card .t{font-weight:700;color:var(--ink)}
+  .float-card .s{font-size:11.5px;color:var(--muted)}
+  .card-a{top:6%;right:-22px}
+  .card-b{bottom:18%;left:-26px}
+  .card-c{bottom:-18px;right:24px}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{
+    display:grid;grid-template-columns: 220px 1fr;align-items:center;gap:32px;
+    padding:22px 56px;border-top:1px solid var(--line);background:var(--paper);
+  }
+  .trust .label{
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;line-height:1.35;
+  }
+  .trust .logos{
+    display:flex;align-items:center;gap:42px;flex-wrap:wrap;
+    font-family:'Manrope',sans-serif;color:var(--muted);
+  }
+  .trust .logos .ent{
+    font-weight:800;letter-spacing:-.01em;opacity:.85;font-size:18px;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .trust .logos .ent .sq{width:14px;height:14px;border-radius:3px;background:var(--muted);opacity:.6}
+  .trust .logos .ent.ms .sq{background:#0078D4;opacity:1}
+  .trust .logos .ent.ovh .sq{background:#123F6D;opacity:1}
+  .trust .logos .ent.hp .sq{border-radius:50%;background:#0096D6;opacity:1}
+  .trust .logos .ent.tcx .sq{background:#1A5BFF;opacity:1}
+  .trust .logos .ent.ebp .sq{background:#E63946;opacity:1}
+  .trust .logos .ent.gg .sq{background:#FBBC05;opacity:1}
+
+  /* SVG sizing */
+  .ico svg{width:16px;height:16px}
+  .ic-18 svg{width:18px;height:18px}
+
+  /* Tweak variants */
+  body[data-bg="dark"] .page{background:#0B1B2B}
+  body[data-bg="dark"] .topbar{border-color:#16304b;color:#9FB0C2}
+  body[data-bg="dark"] .topbar .phone{color:#fff}
+  body[data-bg="dark"] .pill{background:#11253C;color:#EAF2FF}
+  body[data-bg="dark"] nav.main{border-color:#16304b}
+  body[data-bg="dark"] .nav-links{color:#EAF2FF}
+  body[data-bg="dark"] .logo{color:#fff}
+  body[data-bg="dark"] .btn-ghost{color:#EAF2FF;border-color:#1f3a59}
+  body[data-bg="dark"] .btn-primary{background:#fff;color:var(--ink)}
+  body[data-bg="dark"] h1.hero-title{color:#fff}
+  body[data-bg="dark"] .hero-sub{color:#9FB0C2}
+  body[data-bg="dark"] .eyebrow{background:#11253C;color:#EAF2FF;border-color:#1f3a59}
+  body[data-bg="dark"] .kpis{border-color:#16304b}
+  body[data-bg="dark"] .kpi .v{color:#fff}
+  body[data-bg="dark"] .kpi .l{color:#9FB0C2}
+  body[data-bg="dark"] .trust{background:#091624;border-color:#16304b}
+  body[data-bg="dark"] .trust .label{color:#9FB0C2}
+  body[data-bg="dark"] .trust .logos{color:#C8D3E0}
+  body[data-bg="dark"] .btn-outline{background:transparent;color:#fff;border-color:#1f3a59}
+  body[data-bg="dark"] .float-card{background:#11253C;box-shadow:0 18px 40px -18px rgba(0,0,0,.5), 0 0 0 1px #1f3a59;color:#fff}
+  body[data-bg="dark"] .float-card .t{color:#fff}
+  body[data-bg="dark"] .float-card .s{color:#9FB0C2}
+
+  body[data-layout="overlay"] .hero{grid-template-columns:1fr}
+  body[data-layout="overlay"] .hero .copy{
+    position:absolute;left:56px;top:50%;transform:translateY(-50%);
+    max-width:620px;z-index:2;color:#fff;
+    text-shadow:0 1px 30px rgba(11,27,43,.4);
+  }
+  body[data-layout="overlay"] .hero .copy h1.hero-title,
+  body[data-layout="overlay"] .hero .copy .hero-sub{color:#fff}
+  body[data-layout="overlay"] .hero .copy .hero-sub{color:rgba(255,255,255,.85)}
+  body[data-layout="overlay"] .hero .copy .eyebrow{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff;backdrop-filter:blur(8px)}
+  body[data-layout="overlay"] .hero .copy .kpis{border-color:rgba(255,255,255,.2)}
+  body[data-layout="overlay"] .hero .copy .kpi .v{color:#fff}
+  body[data-layout="overlay"] .hero .copy .kpi .l{color:rgba(255,255,255,.75)}
+  body[data-layout="overlay"] .stage{
+    position:absolute;inset:24px 24px 24px 24px;width:auto;aspect-ratio:auto;border-radius:28px;
+  }
+  body[data-layout="overlay"] .stage::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg, rgba(11,27,43,.78) 0%, rgba(11,27,43,.35) 55%, rgba(11,27,43,.1) 100%);
+  }
+  body[data-layout="overlay"] .hero{min-height:640px;padding:24px}
+  body[data-layout="overlay"] .float-card{z-index:3}
+  body[data-layout="overlay"] .card-a{top:48px;right:48px}
+  body[data-layout="overlay"] .card-b{bottom:48px;right:240px;left:auto}
+  body[data-layout="overlay"] .card-c{bottom:48px;right:48px}
+
+</style>
+</head>
+<body data-bg="light" data-layout="split" data-accent="blue">
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+// ---------- Tiny inline icons ----------
+const Icon = {
+  phone:  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>,
+  bolt:   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
+  shield: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+  pin:    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>,
+  download:<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>,
+  arrow:  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>,
+  chevron:<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>,
+  clock:  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
+  cpu:    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/></svg>,
+};
+
+// ---------- Defaults persisted via Tweaks ----------
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "light",
+  "layout": "split",
+  "accent": "blue",
+  "eyebrow": "Intervention sous 1h • Nantes, St-Nazaire, Ancenis",
+  "title_lead": "Dépannage informatique",
+  "title_loc": "à Nantes",
+  "title_tail": "pour les pros, sans interruption.",
+  "sub": "A2EXPERTS intervient en express sur votre infrastructure : panne serveur, poste de travail, réseau, messagerie, sauvegarde. Une équipe locale, des contrats clairs, depuis 2010.",
+  "showFloating": true,
+  "showKpis": true
+}/*EDITMODE-END*/;
+
+const ACCENT_MAP = {
+  blue:  { '--accent':'#1E6BFF', '--accent-2':'#00C2A8' },
+  navy:  { '--accent':'#0B3A8C', '--accent-2':'#00A18B' },
+  teal:  { '--accent':'#0E8E84', '--accent-2':'#1E6BFF' },
+  orange:{ '--accent':'#FF7A1A', '--accent-2':'#1E6BFF' },
+};
+
+function applyTweaks(t){
+  document.body.dataset.bg = t.theme;
+  document.body.dataset.layout = t.layout;
+  document.body.dataset.accent = t.accent;
+  const map = ACCENT_MAP[t.accent] || ACCENT_MAP.blue;
+  Object.entries(map).forEach(([k,v]) => document.documentElement.style.setProperty(k,v));
+}
+
+function HeroPage(){
+  const [tw, setTweak] = (window.useTweaks ? window.useTweaks(TWEAK_DEFAULTS) : [TWEAK_DEFAULTS, ()=>{}]);
+
+  useEffect(() => { applyTweaks(tw); }, [tw.theme, tw.layout, tw.accent]);
+
+  return (
+    <div className="page" data-screen-label="01 Hero">
+      {/* TOP BAR */}
+      <div className="topbar">
+        <div className="left">
+          <span className="pill"><span className="dot"></span>Hotline ouverte • 8h30–18h</span>
+          <span>Lun–Jeu 8h30–18h • Ven 8h30–17h</span>
+        </div>
+        <div className="right">
+          <a href="#">Espace client</a>
+          <a href="#">Télécharger l'assistance</a>
+          <a className="phone" href="tel:0285521395">02 85 52 13 95</a>
+        </div>
+      </div>
+
+      {/* MAIN NAV */}
+      <nav className="main">
+        <a className="logo" href="#">
+          <span className="logo-mark">A</span>
+          <span className="logo-name">a2experts<span>.</span></span>
+        </a>
+        <div className="nav-links">
+          <a href="#">Nos métiers <span className="chev">{Icon.chevron}</span></a>
+          <a href="#">Nos services <span className="chev">{Icon.chevron}</span></a>
+          <a href="#">Dépannage</a>
+          <a href="#">À propos</a>
+          <a href="#">Actualités</a>
+        </div>
+        <div className="nav-cta">
+          <a className="btn btn-ghost" href="#"><span className="ic-18">{Icon.download}</span>Assistance</a>
+          <a className="btn btn-primary" href="#">Contact{Icon.arrow}</a>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="copy">
+          <span className="eyebrow"><span className="dot"></span>{tw.eyebrow}</span>
+          <h1 className="hero-title">
+            {tw.title_lead} <em>{tw.title_loc}</em><br/>{tw.title_tail}
+          </h1>
+          <p className="hero-sub">{tw.sub}</p>
+
+          <div className="hero-ctas">
+            <a className="btn btn-lg btn-accent" href="tel:0285521395">
+              <span className="ic-18">{Icon.phone}</span>
+              Demander une intervention
+            </a>
+            <a className="btn btn-lg btn-outline" href="#">
+              <span className="ic-18">{Icon.download}</span>
+              Logiciel d'assistance
+            </a>
+          </div>
+
+          {tw.showKpis && (
+            <div className="kpis">
+              <div className="kpi"><div className="v">&lt;1h</div><div className="l">Temps d'intervention moyen</div></div>
+              <div className="kpi"><div className="v">15<span>+</span></div><div className="l">Ans au service des PME</div></div>
+              <div className="kpi"><div className="v">3</div><div className="l">Agences — Nantes · St-Nazaire · Ancenis</div></div>
+            </div>
+          )}
+        </div>
+
+        {/* IMAGE STAGE */}
+        <div className="stage" aria-label="Emplacement photo">
+          <div className="drop-hint">
+            <b>📷 Visuel à intégrer ici</b>
+            <span>Photo d'un technicien A2EXPERTS en intervention, avec en arrière-plan un repère nantais (Grue Titan jaune, Anneaux de Buren, Île de Nantes ou quais de la Loire).</span>
+            <div className="mono" style={{marginTop:6}}>format 5:6 · 1200×1440 min · jpg/webp</div>
+          </div>
+
+          <div className="placeholder-meta">
+            <span className="lbl">[ HERO_IMAGE ] — technicien_nantes.jpg</span>
+            <span className="dims">5 : 6</span>
+          </div>
+
+          {tw.showFloating && (
+            <>
+              <div className="float-card card-a">
+                <span className="ico">{Icon.clock}</span>
+                <div>
+                  <div className="t">Réponse &lt; 15 min</div>
+                  <div className="s">Hotline experts certifiés</div>
+                </div>
+              </div>
+              <div className="float-card card-b green">
+                <span className="ico">{Icon.shield}</span>
+                <div>
+                  <div className="t">Données sécurisées</div>
+                  <div className="s">Sauvegarde + chiffrement</div>
+                </div>
+              </div>
+              <div className="float-card card-c orange">
+                <span className="ico">{Icon.pin}</span>
+                <div>
+                  <div className="t">Sur site à Nantes</div>
+                  <div className="s">9 rue du Petit Châtelier</div>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+      {/* TRUST STRIP */}
+      <div className="trust">
+        <div className="label">Partenaires &<br/>certifications</div>
+        <div className="logos">
+          <span className="ent ms"><span className="sq"></span>Microsoft</span>
+          <span className="ent ovh"><span className="sq"></span>OVHcloud</span>
+          <span className="ent hp"><span className="sq"></span>HP</span>
+          <span className="ent tcx"><span className="sq"></span>3CX</span>
+          <span className="ent ebp"><span className="sq"></span>EBP</span>
+          <span className="ent gg"><span className="sq"></span>Google</span>
+        </div>
+      </div>
+
+      {/* TWEAKS PANEL */}
+      {window.TweaksPanel && (
+        <window.TweaksPanel title="Tweaks — Bannière">
+          <window.TweakSection title="Apparence">
+            <window.TweakRadio label="Thème"
+              value={tw.theme}
+              onChange={v => setTweak('theme', v)}
+              options={[{value:'light',label:'Clair'},{value:'dark',label:'Sombre'}]} />
+            <window.TweakRadio label="Mise en page"
+              value={tw.layout}
+              onChange={v => setTweak('layout', v)}
+              options={[{value:'split',label:'2 colonnes'},{value:'overlay',label:'Pleine largeur'}]} />
+            <window.TweakSelect label="Couleur d'accent"
+              value={tw.accent}
+              onChange={v => setTweak('accent', v)}
+              options={[
+                {value:'blue', label:'Bleu électrique'},
+                {value:'navy', label:'Navy profond'},
+                {value:'teal', label:'Teal'},
+                {value:'orange', label:'Orange dépannage'},
+              ]} />
+          </window.TweakSection>
+
+          <window.TweakSection title="Contenu">
+            <window.TweakText label="Eyebrow" value={tw.eyebrow} onChange={v => setTweak('eyebrow', v)} />
+            <window.TweakText label="Titre — début" value={tw.title_lead} onChange={v => setTweak('title_lead', v)} />
+            <window.TweakText label="Titre — lieu" value={tw.title_loc} onChange={v => setTweak('title_loc', v)} />
+            <window.TweakText label="Titre — fin" value={tw.title_tail} onChange={v => setTweak('title_tail', v)} />
+            <window.TweakText label="Sous-titre" value={tw.sub} onChange={v => setTweak('sub', v)} multiline />
+          </window.TweakSection>
+
+          <window.TweakSection title="Éléments">
+            <window.TweakToggle label="Chiffres clés (KPIs)" value={tw.showKpis} onChange={v => setTweak('showKpis', v)} />
+            <window.TweakToggle label="Cartes flottantes" value={tw.showFloating} onChange={v => setTweak('showFloating', v)} />
+          </window.TweakSection>
+        </window.TweaksPanel>
+      )}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<HeroPage />);
+</script>
+</body>
+</html>

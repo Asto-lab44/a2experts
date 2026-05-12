@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Agences A2EXPERTS — Basse-Goulaine & Couëron | Nantes</title>
+<meta name="description" content="Nos 2 agences de dépannage informatique en Loire-Atlantique : Basse-Goulaine (rive sud) et Couëron (rive nord). Adresses, horaires, zones d'intervention."/>
+<link rel="canonical" href="https://www.a2experts.fr/agences.html"/>
+<meta name="robots" content="index,follow"/><meta name="geo.region" content="FR-44"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="site/style.css"/>
+</head><body>
+<div data-include="header"></div>
+
+<div class="container breadcrumb"><a href="index.html">Accueil</a><span class="sep">›</span>Nos agences</div>
+
+<section class="page-hero"><div class="container">
+  <span class="eyebrow">Loire-Atlantique · Nantes Métropole</span>
+  <h1>2 agences pour couvrir Nantes et toute la Loire-Atlantique.</h1>
+  <p class="lead">Nos implantations à Basse-Goulaine et Couëron, de part et d'autre de la Loire, nous permettent d'intervenir en moins d'une heure sur toute la métropole nantaise et au-delà.</p>
+</div></section>
+
+<section><div class="container">
+  <div class="agency-grid">
+    <article class="agency" id="basse-goulaine">
+      <span class="pill">📍 Rive Sud-Est</span>
+      <h3>Agence de Basse-Goulaine</h3>
+      <div class="infos">
+        <b>Adresse</b><span>3 rue de Tasmanie, 44115 Basse-Goulaine</span>
+        <b>Téléphone</b><span><a href="tel:0240564965">02 40 56 49 65</a></span>
+        <b>Horaires</b><span>Lun–Jeu 8h30–12h30 · 14h–18h · Ven 8h30–12h30 · 14h–17h</span>
+        <b>Zones</b><span>Nantes Sud, Vertou, Saint-Sébastien, Haute-Goulaine, La Haye-Fouassière, Vallet, Clisson, Le Loroux-Bottereau</span>
+        <b>Spécialités</b><span>Vignoble nantais, professions libérales, viticulteurs</span>
+      </div>
+      <a class="btn btn-dark" href="contact.html">Prendre contact →</a>
+    </article>
+    <article class="agency" id="coueron">
+      <span class="pill">📍 Rive Nord-Ouest</span>
+      <h3>Agence de Couëron</h3>
+      <div class="infos">
+        <b>Adresse</b><span>25 boulevard de la Libération, 44220 Couëron</span>
+        <b>Téléphone</b><span><a href="tel:0240564966">02 40 56 49 66</a></span>
+        <b>Horaires</b><span>Lun–Jeu 8h30–12h30 · 14h–18h · Ven 8h30–12h30 · 14h–17h</span>
+        <b>Zones</b><span>Nantes Nord, Saint-Herblain, Indre, Sautron, Orvault, Savenay, Saint-Étienne-de-Montluc, Le Pellerin</span>
+        <b>Spécialités</b><span>Industrie, logistique, BTP, e-commerce</span>
+      </div>
+      <a class="btn btn-dark" href="contact.html">Prendre contact →</a>
+    </article>
+  </div>
+</div></section>
+
+<section style="background:var(--paper)"><div class="container">
+  <div class="section-eyebrow">Zone d'intervention élargie</div>
+  <h2>Au-delà de Nantes Métropole.</h2>
+  <p class="sub">Pour nos clients sous contrat d'infogérance, nous intervenons sur toute la Loire-Atlantique et la frange du Maine-et-Loire et de la Vendée.</p>
+  <div class="grid" id="zones" style="grid-template-columns:repeat(4,1fr);gap:12px"></div>
+  <script>
+    const z=['Nantes','Basse-Goulaine','Couëron','Saint-Herblain','Rezé','Vertou','Saint-Sébastien-sur-Loire','Bouguenais','Orvault','Sautron','La Chapelle-sur-Erdre','Carquefou','Sainte-Luce-sur-Loire','Thouaré-sur-Loire','Indre','Saint-Jean-de-Boiseau','La Montagne','Le Pellerin','Mauves-sur-Loire','La Haye-Fouassière','Vallet','Clisson','Le Loroux-Bottereau','Saint-Julien-de-Concelles','Pornic','Saint-Nazaire','Savenay','Châteaubriant','Ancenis','Cholet','Pontchâteau','Guérande'];
+    document.getElementById('zones').innerHTML=z.map(v=>`<div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 16px;font-size:14px;display:flex;gap:8px;align-items:center"><span style="color:var(--accent)">📍</span>${v}</div>`).join('');
+  </script>
+</div></section>
+
+<div data-include="footer"></div>
+<script src="site/include.js"></script>
+</body></html>
