@@ -80,10 +80,10 @@ h1 em{font-style:normal;color:var(--accent);position:relative}
 .float .ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#EAF2FF;color:var(--accent);flex-shrink:0}
 .float .t{font-weight:700}
 .float .s{font-size:11.5px;color:var(--muted)}
-.float.a{top:6%;right:8px}
-.float.b{bottom:20%;left:8px}
+.float.a{top:8%;right:12px}
+.float.b{top:50%;left:12px;transform:translateY(-50%)}
 .float.b .ico{background:#E6FAF6;color:var(--accent-2)}
-.float.c{bottom:10%;right:24px}
+.float.c{bottom:8%;left:50%;transform:translateX(-50%)}
 .float.c .ico{background:#FFF1E6;color:var(--warning)}
 @media (max-width:920px){.float{display:none}}
 
