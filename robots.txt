@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /brand/
+Disallow: /*.jsx$
+
+Sitemap: https://www.a2experts.fr/sitemap.xml
