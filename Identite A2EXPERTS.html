@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>A2EXPERTS — Identité graphique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body { font-family: 'Manrope', system-ui, sans-serif; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="brand/tokens.jsx"></script>
+<script type="text/babel" src="brand/artboards.jsx"></script>
+
+<script type="text/babel">
+const { DesignCanvas, DCSection, DCArtboard } = window;
+
+function App() {
+  return (
+    <DesignCanvas title="A2EXPERTS — Identité graphique" subtitle="Dépannage informatique · Nantes">
+      <DCSection id="overview" title="01 · Fondations" subtitle="Couverture, logo, palette, typographie">
+        <DCArtboard id="cover"  label="Couverture" width={1280} height={800}><CoverArtboard/></DCArtboard>
+        <DCArtboard id="logo"   label="Système de logo" width={1280} height={900}><LogoSystem/></DCArtboard>
+        <DCArtboard id="colors" label="Palette" width={1280} height={780}><ColorPalette/></DCArtboard>
+        <DCArtboard id="type"   label="Typographie" width={1280} height={900}><Typography/></DCArtboard>
+      </DCSection>
+
+      <DCSection id="papeterie" title="02 · Papeterie" subtitle="Carte de visite, papier en-tête, signature email">
+        <DCArtboard id="bcard"  label="Carte de visite — recto / verso" width={1100} height={600}><BusinessCards/></DCArtboard>
+        <DCArtboard id="letter" label="Papier en-tête A4" width={780} height={1000}><Letterhead/></DCArtboard>
+        <DCArtboard id="email"  label="Signature email" width={1100} height={680}><EmailSignature/></DCArtboard>
+      </DCSection>
+
+      <DCSection id="digital" title="03 · Digital & terrain" subtitle="Réseaux sociaux, véhicules, équipements">
+        <DCArtboard id="social"  label="Kit réseaux sociaux" width={1280} height={1000}><SocialKit/></DCArtboard>
+        <DCArtboard id="vehicle" label="Marquage véhicule" width={1280} height={620}><VehicleLivery/></DCArtboard>
+        <DCArtboard id="merch"   label="Goodies & équipements" width={1280} height={720}><MerchKit/></DCArtboard>
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
