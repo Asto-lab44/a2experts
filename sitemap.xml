@@ -10,6 +10,9 @@
   <url><loc>https://www.a2experts.fr/societe-informatique-basse-goulaine-coueron.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.a2experts.fr/agences.html</loc><priority>0.8</priority></url>
   <url><loc>https://www.a2experts.fr/equipe.html</loc><priority>0.75</priority></url>
+  <url><loc>https://www.a2experts.fr/partenaires.html</loc><priority>0.75</priority></url>
+  <url><loc>https://www.a2experts.fr/etudes-de-cas.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.a2experts.fr/presse.html</loc><priority>0.6</priority></url>
   <url><loc>https://www.a2experts.fr/contact.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.a2experts.fr/mentions-legales.html</loc><priority>0.2</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://www.a2experts.fr/cgv.html</loc><priority>0.2</priority><changefreq>yearly</changefreq></url>
