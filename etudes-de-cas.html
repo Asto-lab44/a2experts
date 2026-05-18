@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Études de cas — Projets informatiques pour PME nantaises | A2EXPERTS</title>
+<meta name="description" content="Découvrez nos études de cas : migration Microsoft 365, déploiement 3CX, sauvegarde anti-ransomware, infogérance complète. Retours d'expérience de PME de Nantes, Basse-Goulaine et Couëron."/>
+<meta name="keywords" content="études de cas informatique nantes, cas client basse-goulaine, retour expérience infogérance pme, témoignage 3cx nantes, migration m365 vignoble nantais, société informatique basse-goulaine, société informatique coueron"/>
+<link rel="canonical" href="https://www.a2experts.fr/etudes-de-cas.html"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta name="geo.region" content="FR-44"/><meta name="geo.placename" content="Nantes, Basse-Goulaine, Couëron"/>
+<meta property="og:title" content="Études de cas — A2EXPERTS"/>
+<meta property="og:description" content="Migrations, infogérance, cybersécurité, téléphonie : retours d'expérience concrets de nos clients PME nantais."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="fr_FR"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="site/style.css"/>
+<style>
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+@media (max-width:920px){.case-grid{grid-template-columns:1fr}}
+.case{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:14px;transition:transform .15s,box-shadow .15s,border-color .15s}
+.case:hover{transform:translateY(-3px);box-shadow:0 22px 50px -25px rgba(11,27,43,.18);border-color:#cdd6e0}
+.case .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.case .meta .sep{color:var(--line)}
+.case h3{font-size:22px;line-height:1.25;margin:0;letter-spacing:-.01em}
+.case .client{font-size:14px;color:var(--muted)}
+.case .block{padding-top:10px;border-top:1px dashed var(--line)}
+.case .block b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:6px}
+.case .block p{margin:0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.case .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.case .kpis div{background:var(--paper);border-radius:10px;padding:10px 12px;text-align:center}
+.case .kpis b{display:block;font-size:18px;color:var(--accent);font-weight:800}
+.case .kpis span{font-size:11px;color:var(--muted);line-height:1.3;display:block;margin-top:2px}
+.case .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.case .stack span{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 9px;border-radius:6px;background:var(--paper);border:1px solid var(--line);color:var(--ink-2)}
+</style>
+</head><body>
+<div data-include="header"></div>
+
+<div class="container breadcrumb"><a href="index.html">Accueil</a><span class="sep">›</span>Études de cas</div>
+
+<section class="page-hero"><div class="container">
+  <span class="eyebrow">Retours d'expérience clients</span>
+  <h1>Études de <em>cas</em> — projets IT pour PME nantaises.</h1>
+  <p class="lead">Migrations Microsoft 365, déploiements 3CX, sauvegardes anti-ransomware, infogérances complètes : 6 projets concrets menés pour nos clients de Nantes, Basse-Goulaine, Couëron et de toute la Loire-Atlantique. Anonymisés sur demande, chiffrés systématiquement.</p>
+</div></section>
+
+<section><div class="container">
+  <div class="section-eyebrow">6 projets récents</div>
+  <h2>Du diagnostic à la mise en production.</h2>
+  <p class="sub">Chaque cas présente le contexte, les enjeux, les actions menées, les résultats mesurés et la stack technique utilisée. Tous nos clients sont basés en Loire-Atlantique.</p>
+
+  <div class="case-grid">
+
+    <article class="case">
+      <div class="meta">Infogérance · 18 mois<span class="sep">·</span>Basse-Goulaine</div>
+      <h3>Cabinet d'experts-comptables — externalisation totale de la DSI.</h3>
+      <div class="client">28 collaborateurs · Basse-Goulaine · Sage, Cegid, M365</div>
+      <div class="block"><b>Contexte</b><p>Cabinet historique du vignoble nantais qui gérait son informatique en interne via un collaborateur partiellement formé. Multiplication des incidents, sauvegardes non testées, postes vieillissants, aucune politique de sécurité.</p></div>
+      <div class="block"><b>Action menée</b><p>Audit complet, refonte du parc (renouvellement de 22 postes en leasing HP EliteBook), migration M365 Business Premium, mise en place d'un EDR WithSecure, sauvegarde 3-2-1 sur NAS Synology + cloud OVHcloud, MFA généralisé, formation phishing trimestrielle.</p></div>
+      <div class="block"><b>Résultats</b>
+        <div class="kpis"><div><b>-78%</b><span>incidents mensuels</span></div><div><b>4h→47min</b><span>temps moyen résolution</span></div><div><b>100%</b><span>postes sécurisés MFA</span></div></div>
+      </div>
+      <div class="block"><b>Stack déployée</b>
+        <div class="stack"><span>Microsoft 365 Business Premium</span><span>Entra ID + MFA</span><span>WithSecure Elements EDR</span><span>Synology RS1221+</span><span>OVHcloud Backup</span><span>HP EliteBook 845 G10</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta">Téléphonie · 8 semaines<span class="sep">·</span>Couëron</div>
+      <h3>Plateforme logistique — déploiement standard 3CX 45 postes.</h3>
+      <div class="client">52 collaborateurs · Couëron · Multi-sites Couëron + Indre</div>
+      <div class="block"><b>Contexte</b><p>Migration de l'ancien standard Alcatel obsolète vers une solution IP en prévision de la fin du RTC Orange. Besoin de relier deux sites (Couëron et Indre), d'intégrer le CRM commercial et de permettre le télétravail des fonctions back-office.</p></div>
+      <div class="block"><b>Action menée</b><p>Audit télécom, dimensionnement de l'infrastructure (switches PoE, bande passante symétrique), portage des numéros 02 40 vers trunk SIP OVH, déploiement de 45 postes Yealink T44W + 8 DECT, softphone iOS/Android, SVI à 4 niveaux, file d'attente avec callback, intégration HubSpot.</p></div>
+      <div class="block"><b>Résultats</b>
+        <div class="kpis"><div><b>-42%</b><span>coût télécom mensuel</span></div><div><b>+3</b><span>numéros virtuels gratuits</span></div><div><b>0</b><span>jour d'interruption</span></div></div>
+      </div>
+      <div class="block"><b>Stack déployée</b>
+        <div class="stack"><span>3CX V20 Pro</span><span>Trunk SIP OVH Telecom</span><span>Yealink T44W + W73P DECT</span><span>HubSpot CRM</span><span>Switch HP Aruba PoE</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta">Cybersécurité · Crise<span class="sep">·</span>Saint-Herblain</div>
+      <h3>PME industrielle — réponse à un ransomware Lockbit.</h3>
+      <div class="client">18 collaborateurs · Saint-Herblain · ERP Sage X3, Windows Server</div>
+      <div class="block"><b>Contexte</b><p>Vendredi 17h, un collaborateur ouvre une pièce jointe piégée. En 2h, le ransomware Lockbit chiffre l'intégralité du serveur de fichiers et la base ERP Sage. Demande de rançon de 80 000 €. L'entreprise n'était pas cliente A2EXPERTS, contact d'urgence via un confrère.</p></div>
+      <div class="block"><b>Action menée</b><p>Cellule de crise lancée en 30 minutes. Isolation des machines, déconnexion réseau, expertise forensique (vecteur initial identifié : compte admin sans MFA). Notification CNIL et ANSSI réalisée sous 48h. Restauration depuis sauvegarde Veeam vieille de 14h sur serveur de remplacement. Refus de payer la rançon, durcissement complet (EDR, MFA, segmentation VLAN, formation équipes).</p></div>
+      <div class="block"><b>Résultats</b>
+        <div class="kpis"><div><b>72h</b><span>retour à l'activité</span></div><div><b>0€</b><span>rançon versée</span></div><div><b>14h</b><span>de données perdues</span></div></div>
+      </div>
+      <div class="block"><b>Stack post-incident</b>
+        <div class="stack"><span>WithSecure Elements EDR</span><span>Veeam Backup Office</span><span>Stormshield SN-S</span><span>Entra ID + MFA</span><span>Sensibilisation trimestrielle</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta">Migration cloud · 4 semaines<span class="sep">·</span>Nantes</div>
+      <h3>Cabinet d'avocats — passage à Microsoft 365 + Drive.</h3>
+      <div class="client">12 collaborateurs · Nantes centre · Confidentialité juridique</div>
+      <div class="block"><b>Contexte</b><p>Cabinet d'avocats utilisant un serveur Exchange auto-hébergé vieillissant et un partage de fichiers Windows. Volonté de migrer vers le cloud souverain pour faciliter la mobilité tout en garantissant la confidentialité des données clients.</p></div>
+      <div class="block"><b>Action menée</b><p>Migration des 12 boîtes mail Exchange vers Microsoft 365 Business Premium (datacenter France OVHcloud hybride), création de SharePoint Online avec arborescence métier (dossiers clients confidentiels), MFA Microsoft Authenticator pour tous, signature électronique Yousign intégrée, sauvegarde tierce Veeam M365.</p></div>
+      <div class="block"><b>Résultats</b>
+        <div class="kpis"><div><b>0</b><span>mail perdu en migration</span></div><div><b>100%</b><span>conformité RGPD</span></div><div><b>+85%</b><span>satisfaction mobilité</span></div></div>
+      </div>
+      <div class="block"><b>Stack déployée</b>
+        <div class="stack"><span>Microsoft 365 Business Premium</span><span>SharePoint Online</span><span>MFA Authenticator</span><span>Veeam Backup M365</span><span>Yousign</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta">Infogérance · 24 mois<span class="sep">·</span>Vignoble nantais</div>
+      <h3>Domaine viticole — modernisation IT et e-commerce.</h3>
+      <div class="client">9 collaborateurs · Vallet · Domaine viticole + boutique en ligne</div>
+      <div class="block"><b>Contexte</b><p>Domaine familial du vignoble nantais (Muscadet) souhaitant moderniser son système de caisse, son site e-commerce et sa gestion commerciale, sans alourdir sa structure. Connexion Internet faible, parc hétéroclite.</p></div>
+      <div class="block"><b>Action menée</b><p>Audit complet, négociation d'une fibre dédiée 1 Gb avec opérateur local, déploiement de Google Workspace Business Starter, migration boutique vers Shopify, ERP léger EBP Open Line, sauvegarde sur NAS Synology DS923+, surveillance vidéo Synology Surveillance Station 6 caméras (chai + boutique).</p></div>
+      <div class="block"><b>Résultats</b>
+        <div class="kpis"><div><b>×4</b><span>CA e-commerce annuel</span></div><div><b>-90%</b><span>incidents IT</span></div><div><b>5j</b><span>déploiement complet</span></div></div>
+      </div>
+      <div class="block"><b>Stack déployée</b>
+        <div class="stack"><span>Fibre pro 1Gb symétrique</span><span>Google Workspace</span><span>Shopify Plus</span><span>EBP Open Line</span><span>Synology DS923+</span><span>Synology Surveillance Station</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta">Cloud souverain · 6 semaines<span class="sep">·</span>Vertou</div>
+      <h3>Bureau d'études BTP — hébergement OVHcloud Hosted Private Cloud.</h3>
+      <div class="client">35 collaborateurs · Vertou · Logiciels CAO/DAO lourds</div>
+      <div class="block"><b>Contexte</b><p>Bureau d'études utilisant des logiciels CAO (Revit, AutoCAD) avec d'énormes fichiers projets. Besoin de faire collaborer des collaborateurs sur 3 sites distants tout en conservant la souveraineté française et des performances suffisantes pour les ouvertures de plans.</p></div>
+      <div class="block"><b>Action menée</b><p>Architecture Hosted Private Cloud OVHcloud (datacenter Roubaix), VMware vSphere managé, postes virtuels VDI Horizon, stockage Pure Storage tier 1, VPN SSL multi-sites Stormshield. Migration des 8 To de projets en 3 nuits, formation à VDI sur 2 semaines, plan de continuité testé.</p></div>
+      <div class="block"><b>Résultats</b>
+        <div class="kpis"><div><b>×3</b><span>temps d'ouverture plans</span></div><div><b>100%</b><span>données en France</span></div><div><b>0h</b><span>interruption migration</span></div></div>
+      </div>
+      <div class="block"><b>Stack déployée</b>
+        <div class="stack"><span>OVHcloud Hosted Private Cloud</span><span>VMware vSphere</span><span>Horizon VDI</span><span>Pure Storage</span><span>Stormshield SN-S</span></div>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<section style="background:var(--paper)"><div class="container" style="max-width:920px">
+  <div class="section-eyebrow">Notre méthodologie</div>
+  <h2>De la première rencontre à la mise en production.</h2>
+  <p style="font-size:17px;line-height:1.7;color:var(--ink-2);margin-bottom:18px">Chaque projet présenté ci-dessus suit la même méthodologie éprouvée. Étape 1 : <b>audit gratuit sur site</b>, en présentiel à votre bureau de Nantes, Basse-Goulaine, Couëron ou ailleurs en Loire-Atlantique. Nos consultants cartographient votre parc, votre messagerie, votre sécurité, vos sauvegardes et vos contraintes métier. Livrable : un rapport de 10 à 15 pages avec constat, recommandations chiffrées et planning indicatif. Délai : 10 jours ouvrés.</p>
+  <p style="font-size:17px;line-height:1.7;color:var(--ink-2);margin-bottom:18px">Étape 2 : <b>cadrage projet et POC</b> si nécessaire. Pour les sujets sensibles (migration messagerie, déploiement 3CX, refonte cybersécurité), nous proposons un Proof of Concept sur un périmètre réduit — 3 utilisateurs pilotes, une agence test, un échantillon représentatif. Cela limite le risque et lève les dernières incertitudes avant déploiement global. Étape 3 : <b>déploiement par vagues</b>, jamais en big bang. Pour une migration M365 de 30 boîtes mail, nous travaillons par lots de 5 utilisateurs, le soir ou le week-end, avec rollback possible à chaque vague.</p>
+  <p style="font-size:17px;line-height:1.7;color:var(--ink-2)">Étape 4 : <b>support post-bascule</b>. Pendant les 4 premières semaines après mise en production, un technicien référent reste mobilisé en priorité sur votre dossier — c'est la période où les usages réels font remonter les ajustements nécessaires. Étape 5 : <b>bilan à 3 mois</b> autour d'un café (à votre bureau, à Basse-Goulaine ou à Couëron), avec mesure des KPI projet et identification des évolutions à venir. C'est cette méthodologie qui transforme un « projet IT » en gain durable pour votre PME.</p>
+</div></section>
+
+<section><div class="container">
+  <div class="section-eyebrow">Confidentialité & témoignages</div>
+  <h2>Pourquoi nos études de cas sont parfois anonymisées ?</h2>
+  <p class="sub" style="max-width:780px">La majorité de nos clients accepte d'apparaître nommément dans nos communications — c'est une fierté partagée. Mais certains, notamment dans les secteurs sensibles (cabinets juridiques, professions de santé, victimes de cyberattaque) préfèrent rester confidentiels. Nous respectons strictement cette préférence : aucun nom de client, aucune adresse, aucune donnée chiffrée précise n'est divulgué sans accord écrit préalable. Les KPI présentés ci-dessus sont en revanche tous réels et auditables sur demande sous accord de confidentialité.</p>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px">
+    <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px"><div style="font-size:32px;line-height:1;margin-bottom:10px">★★★★★</div><p style="font-size:14.5px;color:var(--ink-2);margin:0 0 10px;line-height:1.55">« Réactivité exemplaire. Quand notre serveur a planté un vendredi soir, un technicien était sur place à 19h30. Aucune comparaison avec notre ancien prestataire parisien. »</p><div style="font-size:12.5px;color:var(--muted)">DAF · PME industrielle · Couëron</div></div>
+    <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px"><div style="font-size:32px;line-height:1;margin-bottom:10px">★★★★★</div><p style="font-size:14.5px;color:var(--ink-2);margin:0 0 10px;line-height:1.55">« 3CX déployé en 6 semaines, zéro interruption. Le softphone mobile a transformé nos commerciaux itinérants. Et la facture mensuelle a baissé de 40 %. »</p><div style="font-size:12.5px;color:var(--muted)">Dirigeant · Distribution · Basse-Goulaine</div></div>
+    <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px"><div style="font-size:32px;line-height:1;margin-bottom:10px">★★★★★</div><p style="font-size:14.5px;color:var(--ink-2);margin:0 0 10px;line-height:1.55">« Audit cyber très complet, sans baratin. On a appliqué les recommandations sur 3 mois, on dort beaucoup mieux. Et le rapport était lisible pour notre direction non-IT. »</p><div style="font-size:12.5px;color:var(--muted)">Associée · Cabinet juridique · Nantes</div></div>
+  </div>
+</div></section>
+
+<section style="background:var(--ink);color:#fff;padding:56px 0"><div class="container" style="text-align:center;max-width:780px">
+  <div class="section-eyebrow" style="color:#00C2A8">Votre projet, notre prochain cas</div>
+  <h2 style="color:#fff">Échangeons sur votre besoin.</h2>
+  <p style="font-size:17px;color:rgba(255,255,255,.8);line-height:1.7;margin:18px 0 28px">Migration, infogérance, cybersécurité, téléphonie : présentez-nous votre contexte, nous évaluons sous 48h si nous sommes le bon partenaire et comment nous pourrions intervenir.</p>
+  <div class="hero-ctas" style="justify-content:center;display:flex;gap:12px;flex-wrap:wrap">
+    <a class="btn btn-lg btn-primary" href="tel:0240564965" style="font-size:17px">📞 02 40 56 49 65</a>
+    <a class="btn btn-lg btn-ghost" href="contact.html" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:#fff;font-size:17px">Décrire mon projet</a>
+  </div>
+</div></section>
+
+<div data-include="footer"></div>
+<script src="site/include.js"></script>
+</body></html>
